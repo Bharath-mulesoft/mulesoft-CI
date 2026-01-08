@@ -29,6 +29,7 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn clean package -DskipTests
+      working-directory: order-api
 
     - name: Upload Mule artifact
       uses: actions/upload-artifact@v4
